@@ -1,0 +1,23 @@
+@import "./player";
+@import "./song";
+@import "./library";
+@import "./nav";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    color:rgb(179, 157, 157);
+    background-color: #000000;
+    background-image: linear-gradient(360deg, #000000 10%, #125480 100%);
+    overflow-x:hidden;
+
+}
+
+

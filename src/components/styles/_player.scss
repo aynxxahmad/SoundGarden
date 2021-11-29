@@ -1,0 +1,85 @@
+.player{
+    min-height:20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.time-control{
+    min-width:60%;
+    display: flex;
+    justify-content: center;
+
+    input{
+        width: 100%;
+        padding:0.2rem 0rem;
+        appearance: none;
+        background-color: transparent;
+        cursor: pointer;
+
+    }
+
+    p{
+        margin:1rem;
+    }
+}
+
+.play-control{
+    width:40%;
+    display:flex;
+    justify-content: space-between;
+    
+    i,svg,clip-path{
+        cursor: pointer;
+    };
+}
+
+
+//styling the range input
+input[type="range"]:focus{
+    outline: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 10px;
+    width: 10px;
+}
+
+.track{
+    margin-top:1.25rem;
+    background-color: violet;
+    width: 100%;
+    height: 1rem;
+    position: relative;
+    border-radius: 1.75rem;
+    overflow: hidden;
+}
+
+.animate-track{
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    position: absolute;
+    top:0;
+    left:0;
+    transform: translateX(0);
+    pointer-events: none;
+}
+
+
+//media query
+
+@media screen and (max-width:768px){
+    .player{
+        .time-control{
+            width: 90%;
+        }
+    }
+
+    .play-control{
+        width:60%;
+        margin-bottom: 1rem;
+    }
+
+}

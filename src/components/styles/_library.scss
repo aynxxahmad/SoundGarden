@@ -1,0 +1,105 @@
+.Library{
+    position: fixed;
+    top:0;
+    left:0;
+    width:20rem;
+    height:100%;
+    background-color: rgba(255,255,255,0.7);
+    color:rgb(44, 41, 41);
+    box-shadow: 5px 5px 30px rgba(255,255,255,0.7),
+                5px 5px 15px rgb(185, 107, 185);
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    
+    transform: translateX(-100%);
+    pointer-events: none;
+    opacity: 0;
+
+    transition:all 0.5s ease;
+
+    h1{
+        text-align: center;
+        padding-top:1rem;
+        font-weight: bolder;
+    }
+
+
+    
+}
+
+.active-library{
+    transform: translateX(0);
+    pointer-events: all;
+    opacity: 1;
+}
+
+
+
+.Library-song{
+    width: 100%;
+    padding:1.5rem 2rem;
+    transition: background-color 0.5s ease-in-out,
+                transform 0.5s ease-in-out;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #68a1cf;
+        color:black;
+        transform: scale(1.07);
+    }
+
+    img{
+        width: 40%;
+    }
+    .library_song-details{
+        h3{
+            font-size:1.3rem;
+        }
+        h4{
+            font-size: 0.9rem;
+            padding-top:0.5rem;
+        }
+        h5{
+            font-size:0.8rem;
+        }
+    }
+}
+
+.selected{
+    background-color:#24597c;
+    color:black;
+}
+
+//styling the scrollbar
+
+*{
+    scrollbar-width:thin;
+    scrollbar-color: rgba(0,0,0,0.6) transparent;
+}
+
+*::-webkit-scrollbar{
+    width:6px;
+}
+*::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: rgba(0,0,0,0.8) ;
+    border-radius: 15px;
+    border: transparent;
+}
+
+
+@media screen and (max-width:768px) {
+    .Library{
+        width:100%;
+        background-color: rgba(226, 215, 215, 0.9);
+    }
+}
